@@ -1,0 +1,14 @@
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','W','x','y','z'
+            'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','W','x','y','z']
+direction = input("type 'encode' or 'decode' to procedd :\n")
+text = input("type your messege below:\n").lower()
+shift = int(input("selct the number of shift you ant to enter:\n"))
+def encrypt(p_text,p_shift):
+    cipher_text = ""
+    for letter in p_text:
+        position = alphabet.index(letter)
+        neW_position = position + p_shift
+        neW_letter = alphabet[neW_position]
+        cipher_text += neW_letter
+    print(f" your encoded messege is {cipher_text}")
+encrypt(p_text = text,p_shift = shift)
