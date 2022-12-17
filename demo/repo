@@ -1,5 +1,10 @@
-alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','W','x','y','z'
-            'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','W','x','y','z']
+import calendar
+from turtle import *
+import string
+/alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','W','x','y','z'
+/            'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','W','x','y','z']
+alphabet=string.ascii_lowercase
+
 direction = input("type 'encode' or 'decode' to procedd :\n")
 text = input("type your messege below:\n").lower()
 shift = int(input("selct the number of shift you ant to enter:\n"))
@@ -12,3 +17,14 @@ def encrypt(p_text,p_shift):
         cipher_text += neW_letter
     print(f" your encoded messege is {cipher_text}")
 encrypt(p_text = text,p_shift = shift)
+
+speed(10)
+color('cyan')
+bgcolor('black')
+b=200
+while b>0:
+    left(b)
+    forward(b)
+year=2022
+month=12
+print(calendar.month(year,month))
